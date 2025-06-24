@@ -39,10 +39,10 @@ const API_SITES = {
         api: 'https://tyyszy.com/api.php/provide/vod',
         name: '天涯资源',
     },
-    // xiaomaomi: {
-    //     api: 'https://zy.xiaomaomi.cc/api.php/provide/vod',
-    //     name: '小猫咪资源',
-    // },
+    xiaomaomi: {
+        api: 'https://zy.xiaomaomi.cc/api.php/provide/vod',
+        name: '小猫咪资源',
+    },
     ffzy: {
         api: 'http://ffzy5.tv/api.php/provide/vod',
         name: '非凡影视',
@@ -110,6 +110,34 @@ const API_SITES = {
         api: 'https://ikunzyapi.com/api.php/provide/vod',
         name: 'iKun资源'
     },
+    subo: {
+        api: 'https://subocaiji.com/api.php/provide/vod',
+        detail: 'https://subocj.com',
+        name: '速播资源'
+    },
+    fczy: {
+        api: 'https://api.fczy888.me/api.php/provide/vod',
+        name: '蜂巢资源'
+    },
+    ukzy: {
+        api: 'https://api.ukuapi88.com/api.php/provide/vod',
+        name: 'U酷资源'
+    },
+    jmzy: {
+        api: 'https://api.jmzy.com/api.php/provide/vod',
+        detail: 'https://www.jmzy.com',
+        name: '金马资源'
+    },
+    mtzy: {
+        api: 'https://caiji.maotaizy.cc/api.php/provide/vod',
+        detail: 'https://mtzy.me',
+        name: '茅台资源'
+    },
+    wuxianzy: {
+        api: 'https://api.wuxianzy.net/api.php/provide/vod',
+        detail: 'https://wuxianzy.com',
+        name: '无限资源'
+    },
     testSource: {
         api: 'https://www.example.com/api.php/provide/vod',
         name: '空内容测试源',
@@ -123,61 +151,135 @@ const API_SITES = {
     // 这些影片和背后的产业已经使数百万男女“下海”，出卖自己的身体，甚至以此为生计。
     // 而作为观众无辜吗？毫无疑问，他们促成了黄色产业链的再生产。
     // 我们提供此警告，是希望您能认清这些内容的本质——它们是压迫和奴役的工具，而非娱乐。
-    // ckzy: {
-    //     api: 'https://www.ckzy1.com',
-    //     name: 'CK资源',
-    //     adult: true
-    // },
-    // jkun: {
-    //     api: 'https://jkunzyapi.com',
-    //     name: 'jkun资源',
-    //     adult: true
-    // },
-    // bwzy: {
-    //     api: 'https://api.bwzym3u8.com',
-    //     name: '百万资源',
-    //     adult: true
-    // },
-    // souav: {
-    //     api: 'https://api.souavzy.vip',
-    //     name: 'souav资源',
-    //     adult: true
-    // },
-    // r155: {
-    //     api: 'https://155api.com',
-    //     name: '155资源',
-    //     adult: true
-    // },
-    // lsb: {
-    //     api: 'https://apilsbzy1.com',
-    //     name: 'lsb资源',
-    //     adult: true
-    // },
-    // huangcang: {
-    //     api: 'https://hsckzy.vip',
-    //     name: '黄色仓库',
-    //     adult: true,
-    //     detail: 'https://hsckzy.vip'
-    // },
-    // yutu: {
-    //     api: 'https://yutuzy10.com',
-    //     name: '玉兔资源',
-    //     adult: true
-    // },
+    ckzy: {
+        api: 'https://www.ckzy1.com/api.php/provide/vod',
+        name: 'CK资源',
+        adult: true
+    },
+    jkun: {
+        api: 'https://jkunzyapi.com/api.php/provide/vod',
+        name: 'jkun资源',
+        adult: true
+    },
+    bwzy: {
+        api: 'https://api.bwzym3u8.com/api.php/provide/vod',
+        name: '百万资源',
+        adult: true
+    },
+    souav: {
+        api: 'https://api.souavzy.vip/api.php/provide/vod',
+        name: 'souav资源',
+        adult: true
+    },
+    r155: {
+        api: 'https://155api.com/api.php/provide/vod',
+        name: '155资源',
+        adult: true
+    },
+    lsb: {
+        api: 'https://apilsbzy1.com/api.php/provide/vod',
+        name: 'lsb资源',
+        adult: true
+    },
+    huangcang: {
+        api: 'https://hsckzy.vip/api.php/provide/vod',
+        name: '黄色仓库',
+        adult: true,
+        detail: 'https://hsckzy.vip'
+    },
+    yutu: {
+        api: 'https://yutuzy10.com/api.php/provide/vod',
+        name: '玉兔资源',
+        adult: true
+    },
 
-    // 下面是资源失效率高的API源，不建议使用
-    // subo: {
-    //     api: 'https://subocaiji.com/api.php/provide/vod',
-    //     name: '速播资源'
-    // },
-    // fczy: {
-    //     api: 'https://api.fczy888.me/api.php/provide/vod',
-    //     name: '蜂巢资源'
-    // },
-    // ukzy: {
-    //     api: 'https://api.ukuapi88.com/api.php/provide/vod',
-    //     name: 'U酷资源'
-    // },
+    fczy: {
+        api: 'https://api.fczy888.me/api.php/provide/vod',
+        name: '蜂巢片库',
+        detail: 'https://fczy888.com',
+        adult: true
+    },
+    xrbsp: {
+        api: 'https://www.xrbsp.com/api/json.php',
+        name: '淫水机资源',
+        adult: true
+    },
+    fhzy: {
+        api: 'http://fhapi9.com/api.php/provide/vod',
+        name: '番号资源',
+        adult: true
+    },
+    jkunzy: {
+        api: 'https://jkunzyapi.com/api.php/provide/vod',
+        name: '鸡坤资源',
+        adult: true
+    },
+    pgxdy: {
+        api: 'https://www.pgxdy.com/api/json.php',
+        name: '黄AV资源',
+        adult: true
+    },
+    gdlsp: {
+        api: 'https://www.gdlsp.com/api/json.php',
+        name: '香奶儿资源',
+        adult: true
+    },
+    msnii: {
+        api: 'https://www.msnii.com/api/json.php',
+        name: '美少女资源',
+        adult: true
+    },
+    kxgav: {
+        api: 'https://www.kxgav.com/api/json.php',
+        name: '白嫖资源',
+        adult: true
+    },
+    lbzy: {
+        api: 'https://lbapi9.com/api.php/provide/vod',
+        name: '乐播资源',
+        adult: true
+    },
+    ddzy: {
+        api: 'https://api.ddapi.cc/api.php/provide/vod',
+        name: '滴滴资源',
+        adult: true
+    },
+    jingpinx: {
+        api: 'https://www.jingpinx.com/api.php/provide/vod',
+        name: '精品资源',
+        adult: true
+    },
+    yutuzy: {
+        api: 'https://apiyutu.com/api.php/provide/vod',
+        name: '玉兔资源',
+        adult: true
+    },
+    souavzy: {
+        api: 'https://api.souavzy.vip/api.php/provide/vod',
+        name: '搜av资源',
+        adult: true
+    },
+    fqzy: {
+        api: 'https://fqzy.me//api.php/provide/vod',
+        name: '番茄资源',
+        adult: true
+    },
+    semaozy: {
+        api: 'https://caiji.semaozy.net/inc/apijson_vod.php',
+        name: '色猫资源',
+        adult: true
+    },
+    siwazyw: {
+        api: 'https://siwazyw.tv/api.php/provide/vod',
+        name: '丝袜资源',
+        adult: true
+    },
+    lajiao: {
+        api: 'https://apilj.com/api.php/provide/vod',
+        name: '辣椒资源',
+        adult: true
+    }
+
 };
 
 // 添加聚合搜索的配置选项
